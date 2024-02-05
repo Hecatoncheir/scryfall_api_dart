@@ -1,0 +1,74 @@
+analyzer:
+  exclude:
+    - packages
+  plugins:
+    - dart_code_metrics
+
+# https://dart-lang.github.io/linter/lints/index.html.
+# https://dart.dev/guides/language/analysis-options
+linter:
+  rules:
+    - cancel_subscriptions
+    - close_sinks
+    - curly_braces_in_flow_control_structures
+
+dart_code_metrics:
+  # https://dcm.dev/docs/individuals/anti-patterns/
+  anti-patterns:
+    - long-method
+    - long-parameter-list
+  # https://dcm.dev/docs/individuals/metrics
+  metrics:
+    cycloramic-complexity: 5
+    maximum-nesting-level: 5
+    number-of-parameters: 7
+    source-lines-of-code: 250
+  metrics-exclude:
+    - test/**
+  # https://dcm.dev/docs/individuals/rules
+  rules:
+    - avoid-global-state
+    - avoid-ignoring-return-values:
+      exclude:
+        - test/**
+    - avoid-missing-enum-constant-in-map
+    - avoid-unnecessary-type-casts
+    - avoid-non-null-assertion:
+        exclude:
+          - test/**
+    - avoid-unrelated-type-assertions
+    - avoid-unused-parameters
+    - binary-expression-operand-order
+    - double-literal-format
+    - member-ordering-extended:
+        exclude:
+          - test/**
+    - member-ordering:
+        exclude:
+          - test/**
+    - no-boolean-literal-compare
+    - no-empty-block
+    - no-equal-then-else
+    - no-magic-number:
+        exclude:
+          - test/**
+    - no-object-declaration
+    - prefer-conditional-expressions
+    - prefer-correct-identifier-length:
+        max-identifier-length: 45
+        min-identifier-length: 3
+    - prefer-correct-type-name:
+        min-length: 3
+        max-length: 40
+    - prefer-first:
+        exclude:
+          - test/**
+    - prefer-last:
+        exclude:
+          - test/**
+    - prefer-match-file-name:
+        exclude:
+          - test/**
+    - prefer-trailing-comma:
+        exclude:
+          - test/**

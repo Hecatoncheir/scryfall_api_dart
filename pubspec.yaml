@@ -1,0 +1,25 @@
+name: scryfall_api_dart
+description: Rest api wrapper for https://scryfall.com.
+version: 0.0.1
+repository: https://github.com/Hecatoncheir/scryfall_api_dart
+
+environment:
+  sdk: ^3.2.6
+
+dependencies:
+  meta: ^1.11.0
+  json_annotation: ^4.8.1
+  http: ^1.2.0
+
+dev_dependencies:
+  analyzer: ^6.4.1
+  lints: ^3.0.0
+  dart_code_metrics: ^5.7.6
+  test: ^1.25.2
+  build: ^2.4.1
+  build_runner: ^2.4.8
+  json_serializable: ^6.7.1
+
+dependency_overrides:
+  http: ^1.2.0
+  analyzer: ^6.4.1
