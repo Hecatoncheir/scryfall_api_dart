@@ -18,7 +18,6 @@ void main() {
       late final http.Client httpClient;
       setUpAll(() {
         httpClient = MockClient((request) async {
-          print(request.toString());
           return request.url.toString() ==
                   'https://api.scryfall.com/cards/named?fuzzy=Bloodline+Keeper'
               ? http.Response.bytes(encodedJson, 200)
