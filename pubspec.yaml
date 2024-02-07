@@ -1,6 +1,6 @@
 name: scryfall_api_dart
 description: Rest api wrapper for https://scryfall.com.
-version: 0.0.1
+version: 0.1.0
 repository: https://github.com/Hecatoncheir/scryfall_api_dart
 
 environment:
